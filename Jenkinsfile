@@ -13,7 +13,7 @@ pipeline {
 stages{
         stage('Build'){
             steps {
-                sh 'mvn clean package'
+                sh 'source /etc/profile.d/maven.sh && mvn clean package'
             }
             post {
                 success {
